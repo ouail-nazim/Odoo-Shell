@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="odoo.shell.menu.icon">
+        <li class="ywa_odoo_shell_systray_item">
+            <a class="o-no-caret" data-display="static" aria-expanded="false" title="Odoo Shell" href="#" role="button">
+                <i class="fa fa-terminal" role="img" aria-label="Odoo Shell"/>
+            </a>
+        </li>
+    </t>
+</templates>
