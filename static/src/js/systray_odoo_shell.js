@@ -78,7 +78,6 @@ odoo.define('odoo_shell.odoo_shell_widget', function (require) {
             let command = $('#shell-command').val();
             let type = $('#shell-type').val();
             let params = this._getCurrentLocationParams();
-            debugger
             const result = await this._rpc({
                 model: 'ir.model',
                 method: 'evaluate_command',

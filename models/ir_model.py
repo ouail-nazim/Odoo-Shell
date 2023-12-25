@@ -1,5 +1,6 @@
 from odoo import models, api
 from odoo.tools.safe_eval import safe_eval
+from collections import defaultdict, OrderedDict
 
 
 class IrModel(models.Model):
@@ -13,7 +14,11 @@ class IrModel(models.Model):
                 self = self.browse(int(res_id))
         try:
             if type == "py":
-                return safe_eval(command, {'self': self})
+                res = safe_eval(command, {'self': self})
+                if isinstance(res, OrderedDict):
+                    res = list(res)
+                return res
+
             elif type == "sql":
                 self.env.cr.execute(command)
                 result = self.env.cr.fetchall()
