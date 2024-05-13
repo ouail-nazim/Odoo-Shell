@@ -18,7 +18,6 @@ class IrModel(models.Model):
                 if isinstance(res, OrderedDict):
                     res = list(res)
                 return res
-
             elif type == "sql":
                 self.env.cr.execute(command)
                 result = self.env.cr.fetchall()

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="odoo_shell.ShellMenuContainer" owl="1">
+        <li class="ywa_odoo_shell_systray_item bg-danger" t-on-click="_openShellWizard" >
+            <a class="o-no-caret" data-display="static" aria-expanded="false" title="Odoo Shell" href="#open-shell" role="button">
+                <b class="fa fa-terminal" role="img" aria-label="Odoo Shell"/>
+            </a>
+        </li>
+    </t>
+</templates>
